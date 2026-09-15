@@ -1,27 +1,29 @@
 # How to Use ShieldPay
 
-## What You Need
+## Getting Started on Preprod
 
-Before you start, make sure you have:
+Welcome to ShieldPay on the Midnight Preprod network! Preprod is the final testing ground before mainnet launch. Here is how to get set up:
 
-- **Lace Wallet** — the official Midnight-compatible browser wallet ([download here](https://www.lace.io))
-- **A web browser** (Chrome or Firefox recommended)
-- **Some tDUST** — the Midnight testnet token for gas fees (available from the [Midnight faucet](https://faucet.midnight.network))
-- **A Midnight Preprod account** in your Lace wallet
+1. **Get the Lace Wallet**: Download the official Lace wallet from [lace.io](https://www.lace.io) and install the browser extension.
+2. **Switch to Preprod**: In Lace, go to Settings > Network and select "Midnight Preprod".
+3. **Get Test Tokens**: You need tDUST (testnet tokens) to pay for transaction fees. Visit the [Midnight Faucet](https://faucet.midnight.network), paste your Preprod address, and request funds.
 
-> **Note:** You do NOT need to be technical. ShieldPay handles all the cryptography for you behind the scenes.
+Once you have your wallet and some tDUST, you're ready to use ShieldPay!
+
+> **Note:** You do NOT need to be technical. ShieldPay handles all the zero-knowledge cryptography for you behind the scenes.
 
 ---
 
-## Step-by-Step Guide
+## Your First Transaction
+
+Let's walk through your first shielded transaction.
 
 ### As an Employer / Admin
 
-**Step 1 — Open the app and connect your wallet**
-1. Go to the ShieldPay web app
-2. Click **"Connect Lace Wallet"**
-3. Your Lace browser extension will open — click **Authorize**
-4. You will see your wallet address appear in the top bar. You are now connected.
+**Step 1 — Connect your wallet**
+1. Click **"Connect Lace Wallet"**
+2. Your Lace browser extension will open — click **Authorize**
+3. You will see your wallet address appear. You are now connected! (If you need to disconnect, you can now easily click the red "Disconnect Wallet" button).
 
 **Step 2 — Initialise a new pay period**
 1. Make sure you are on the **"Admin / Employer"** tab

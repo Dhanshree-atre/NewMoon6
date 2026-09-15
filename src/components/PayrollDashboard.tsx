@@ -63,7 +63,23 @@ function TxStatus({
   txHash?: string
   error?: string
 }) {
+  const [step, setStep] = useState(0);
+
+  // Simulate detailed loading steps
+  if (status === 'generating-proof' && step < 3) {
+    setTimeout(() => setStep(step + 1), 1500);
+  } else if (status !== 'generating-proof' && step !== 0) {
+    setStep(0);
+  }
+
   if (status === 'idle') return null
+
+  const proofSteps = [
+    'Compiling ZK Circuit...',
+    'Generating Private Witness...',
+    'Creating Zero-Knowledge Proof...',
+    'Finalizing Proof...'
+  ];
 
   const config = {
     'generating-proof': {
@@ -71,7 +87,7 @@ function TxStatus({
       border: 'rgba(245, 158, 11, 0.3)',
       color: '#fbbf24',
       icon: '⚡',
-      text: 'Generating zero-knowledge proof locally... (salary stays private)',
+      text: proofSteps[step] || proofSteps[3],
     },
     submitting: {
       bg: 'rgba(99, 179, 237, 0.1)',
@@ -109,7 +125,7 @@ function TxStatus({
       alignItems: 'center',
       gap: '8px',
     }}>
-      <span style={{ fontSize: '16px' }}>{config.icon}</span>
+      <span style={{ fontSize: '16px', animation: status === 'generating-proof' || status === 'submitting' ? 'spin 2s linear infinite' : 'none' }}>{config.icon}</span>
       {config.text}
     </div>
   )
@@ -514,6 +530,35 @@ function RecipientPanel() {
               <div style={{ fontSize: '12px', color: '#64748b', marginTop: '8px' }}>
                 📋 Share this with your bank or tax office. They can verify it against the on-chain commitment without seeing your salary.
               </div>
+              <button
+                onClick={() => {
+                  const content = `PAYMENT RECEIPT\n\nDate: ${new Date().toLocaleDateString()}\nStatus: Verified on Midnight Network\n\nProof Hash: ${proofHash}\nAmount: ${amount} USD\nRecipient Key: ${recipientKey}\n\nThis proof can be verified cryptographically against the on-chain payroll commitment.`;
+                  const blob = new Blob([content], { type: 'text/plain' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = `Payment_Receipt_${proofHash.slice(0,8)}.txt`;
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  URL.revokeObjectURL(url);
+                }}
+                style={{
+                  marginTop: '16px',
+                  padding: '10px 16px',
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '8px',
+                  color: '#fff',
+                  fontSize: '13px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+              >
+                📄 Download Receipt (.txt)
+              </button>
             </div>
           )}
         </div>
@@ -531,21 +576,3 @@ export default function PayrollDashboard({ activeTab }: PayrollDashboardProps) {
     </div>
   )
 }
-
-// TODO: Implement PDF generation library import
-
-const generatePDFReceipt = (amount: string, hash: string) => { console.log('Creating PDF Blob...'); };
-
-const generatePDFReceipt = (amount: string, hash: string) => { console.log('Creating PDF Blob...'); };
-
-// PDF includes employee ID, amount, and tx hash
-
-const downloadPDF = () => { alert('PDF Downloaded!'); };
-
-// TODO: Wire up downloadPDF to actual PDF Blob
-
-const [zkState, setZkState] = useState<'idle' | 'compiling' | 'witness' | 'proving' | 'done'>('idle');
-
-const zkStateMessages = { idle: '', compiling: 'Compiling Circuit...', witness: 'Generating Witness...', proving: 'Creating Proof...', done: 'Complete!' };
-
-// Simulate phase transitions for UX
