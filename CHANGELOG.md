@@ -23,3 +23,4 @@
 - chore: format code with prettier
 - docs: update feedback with Level 6 improvements
 - style: update brand colors to purple and green
+- feat: add tab switching between admin and recipient
