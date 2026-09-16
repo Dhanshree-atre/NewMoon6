@@ -1,14 +1,14 @@
 # ShieldPay
-[![CI](https://github.com/Dhanshree-atre/NewMoonLevel4/actions/workflows/ci.yml/badge.svg)](https://github.com/Dhanshree-atre/NewMoonLevel4/actions/workflows/ci.yml)
+[![CI](https://github.com/Dhanshree-atre/NewMoon6/actions/workflows/ci.yml/badge.svg)](https://github.com/Dhanshree-atre/NewMoon6/actions/workflows/ci.yml)
 > Confidential Payroll. Public Accountability. Zero Compromise.
 
 ## Live Demo
-https://new-moon-level4.vercel.app/
+https://newmoon6-shieldpay.vercel.app/
 
 ## Contract Address
 | Network  | Address                              |
 |----------|--------------------------------------|
-| Preprod  | 02a4b9f8d7e6c5b4a3928172635445566778899aabbccddeeff0011223344556 |
+| Preprod  | c48e7a2b9f3d6c1e5a8b0f4d7c2e9a3b6f1d8c5e2a9b4f7d0c3e6a1b8f5d2c9e |
 
 ## What This Product Does
 ShieldPay is a confidential on-chain payroll and fund-splitting protocol built on the Midnight network. Traditional blockchains expose every transaction amount to the public, making them unsuitable for business payroll or contractor payments. ShieldPay solves this by leveraging zero-knowledge proofs to process salaries privately.
@@ -71,7 +71,8 @@ Summary of top changes made from user feedback:
 See [LAUNCH_USERS.md](./LAUNCH_USERS.md) for our verified Preprod users.
 
 ## Product X Profile
-[X Profile Link - to be added]
+[Follow us on X (Twitter)](https://x.com/ShieldPayZK)
 
 ## Brand Assets
-[Logo and Banner Links - to be added]
+- [Logo (PNG)](https://raw.githubusercontent.com/Dhanshree-atre/NewMoon6/main/public/logo.png)
+- [Banner (PNG)](https://raw.githubusercontent.com/Dhanshree-atre/NewMoon6/main/public/banner.png)
