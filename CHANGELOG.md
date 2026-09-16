@@ -14,3 +14,4 @@
 - chore: update dependencies
 - style: improve disconnect button visibility
 - fix: resolve typo in disconnect handler
+- feat: integrate Midnight JS SDK hooks
