@@ -17,3 +17,4 @@
 - feat: integrate Midnight JS SDK hooks
 - refactor: extract TxStatus into separate component
 - docs: add getting started section to USAGE.md
+- feat: implement pdf receipt generation mock
