@@ -71,7 +71,7 @@ Summary of top changes made from user feedback:
 See [LAUNCH_USERS.md](./LAUNCH_USERS.md) for our verified Preprod users.
 
 ## Product X Profile
-[Follow us on X (Twitter)](https://x.com/ShieldPayZK)
+https://x.com/DHANSHREEATRE
 
 ## Brand Assets
 - [Logo (PNG)](https://raw.githubusercontent.com/Dhanshree-atre/NewMoon6/main/public/logo.png)
