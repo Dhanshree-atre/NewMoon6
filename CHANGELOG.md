@@ -26,3 +26,4 @@
 - feat: add tab switching between admin and recipient
 - fix: ensure budget hash is displayed correctly
 - refactor: optimize ZK state hook
+- docs: add final demo link to README
