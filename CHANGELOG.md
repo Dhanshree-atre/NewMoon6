@@ -10,3 +10,4 @@
 - chore: clean up dangling TODOs in PayrollDashboard
 - feat: add download receipt functionality
 - fix: handle missing wallet state smoothly
+- test: add unit tests for wallet connection
