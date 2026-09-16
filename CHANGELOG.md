@@ -27,3 +27,4 @@
 - fix: ensure budget hash is displayed correctly
 - refactor: optimize ZK state hook
 - docs: add final demo link to README
+- feat: finalize Level 6 submission changes
