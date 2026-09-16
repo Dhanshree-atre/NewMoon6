@@ -1,1 +1,2 @@
 - docs: add new preprod contract address
+- feat: remove ZK simulation mode from App.tsx
