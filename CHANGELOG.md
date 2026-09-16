@@ -7,3 +7,4 @@
 - fix: adjust layout margin for WalletConnect
 - feat: implement loading state for ZK proof
 - style: refine alert banner colors
+- chore: clean up dangling TODOs in PayrollDashboard
