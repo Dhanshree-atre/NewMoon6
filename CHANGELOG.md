@@ -1,2 +1,3 @@
 - docs: add new preprod contract address
 - feat: remove ZK simulation mode from App.tsx
+- fix: correct github URL references in README
