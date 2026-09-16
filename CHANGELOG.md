@@ -12,3 +12,4 @@
 - fix: handle missing wallet state smoothly
 - test: add unit tests for wallet connection
 - chore: update dependencies
+- style: improve disconnect button visibility
