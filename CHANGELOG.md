@@ -21,3 +21,4 @@
 - fix: resolve layout shift during compiling state
 - feat: add step-by-step UI for proof generation
 - chore: format code with prettier
+- docs: update feedback with Level 6 improvements
