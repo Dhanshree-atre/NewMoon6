@@ -25,3 +25,4 @@
 - style: update brand colors to purple and green
 - feat: add tab switching between admin and recipient
 - fix: ensure budget hash is displayed correctly
+- refactor: optimize ZK state hook
