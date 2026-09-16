@@ -4,3 +4,4 @@
 - feat: add verified users to LAUNCH_USERS.md
 - docs: update X profile and brand asset links
 - feat: setup preprod contract connection
+- fix: adjust layout margin for WalletConnect
