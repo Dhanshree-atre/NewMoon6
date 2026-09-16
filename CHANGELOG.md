@@ -19,3 +19,4 @@
 - docs: add getting started section to USAGE.md
 - feat: implement pdf receipt generation mock
 - fix: resolve layout shift during compiling state
+- feat: add step-by-step UI for proof generation
