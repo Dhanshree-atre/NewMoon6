@@ -13,3 +13,4 @@
 - test: add unit tests for wallet connection
 - chore: update dependencies
 - style: improve disconnect button visibility
+- fix: resolve typo in disconnect handler
