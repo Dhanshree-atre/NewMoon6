@@ -374,6 +374,42 @@ function AdminPanel() {
           {ledgerState.isFinalized ? '✓ Payroll Finalized' : '🔒 Finalize Payroll Period'}
         </button>
         <TxStatus status={finalStatus} error={finalError} />
+        
+        {ledgerState.isFinalized && (
+          <div style={{ marginTop: '20px', paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ fontSize: '13px', color: '#94a3b8', marginBottom: '12px' }}>
+              Download a cryptographically backed CSV report for compliance audits.
+            </div>
+            <button
+              onClick={() => {
+                const csvContent = `Payroll_ID,Admin_Commitment,Budget_Hash,Total_Payments,Status\n${ledgerState.payrollId},${ledgerState.adminCommitment},${ledgerState.totalBudgetHash},${ledgerState.paymentCount},Finalized\n`;
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `Payroll_Audit_${ledgerState.payrollId}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+              }}
+              style={{
+                padding: '10px 16px',
+                background: 'rgba(255,255,255,0.1)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                borderRadius: '8px',
+                color: '#fff',
+                fontSize: '13px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              📊 Export Audit Log (CSV)
+            </button>
+          </div>
+        )}
       </Card>
     </div>
   )
